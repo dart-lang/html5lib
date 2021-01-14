@@ -23,8 +23,9 @@ Future<Document> testContentDocument() async {
   return parse(File(testPath).readAsStringSync());
 }
 
-var testType = testQsaBaseline; // Only run baseline tests.
-var docType = 'html'; // Only run tests suitable for HTML
+
+var testType = testQsaBaseline | testQsaAdditional; // Only run baseline tests.
+var docType = "html"; // Only run tests suitable for HTML
 
 void main() async {
   /*
